@@ -8,7 +8,7 @@
  * https://github.com/mar10/fancytree/wiki/LicenseInfo
  *
  * @version 2.22.5-0
- * @date 2017-05-07T17:54:15Z
+ * @date 2017-05-07T19:23:46Z
  */
 
 /** Core Fancytree module.
@@ -3399,6 +3399,8 @@ $.extend(Fancytree.prototype,
 				node.span.className = "fancytree-node";
 				if( aria && !node.tr ) {
 					$(node.li).attr("role", "treeitem");
+					// Should not be necessary but Chrome is including too much in name
+				 	$(node.li).attr("aria-labelledby", "ftal_" + opts.idPrefix + node.key);
 				}
 				// if(aria){
 				// 	$(node.li).attr("aria-labelledby", "ftal_" + opts.idPrefix + node.key);
@@ -3582,8 +3584,9 @@ $.extend(Fancytree.prototype,
 				tooltip = opts.tooltip === true ? node.title : opts.tooltip.call(tree, node);
 			}
 			tooltip = tooltip ? " title='" + _escapeTooltip(tooltip) + "'" : "";
-			// id = aria ? " id='ftal_" + opts.idPrefix + node.key + "'" : "";
-			id = "";
+			// Should not be necessary but helps Chrome not add too much to title
+			id = aria ? " id='ftal_" + opts.idPrefix + node.key + "'" : "";
+			// id = "";
 			// role = "";
 			role = "";  // (aria && !node.tr) ? " role='treeitem'" : "";
 			tabindex = opts.titlesTabbable ? " tabindex='0'" : "";
@@ -5164,7 +5167,7 @@ $.extend($.ui.fancytree,
  * https://github.com/mar10/fancytree/wiki/LicenseInfo
  *
  * @version 2.22.5-0
- * @date 2017-05-07T17:54:15Z
+ * @date 2017-05-07T19:23:46Z
  */
 
 // To keep the global namespace clean, we wrap everything in a closure
@@ -5365,7 +5368,7 @@ $.ui.fancytree.registerExtension({
  * https://github.com/mar10/fancytree/wiki/LicenseInfo
  *
  * @version 2.22.5-0
- * @date 2017-05-07T17:54:15Z
+ * @date 2017-05-07T19:23:46Z
  */
 
 ;(function($, window, document, undefined) {
@@ -5831,7 +5834,7 @@ $.ui.fancytree.registerExtension({
  * https://github.com/mar10/fancytree/wiki/LicenseInfo
  *
  * @version 2.22.5-0
- * @date 2017-05-07T17:54:15Z
+ * @date 2017-05-07T19:23:46Z
  */
 
 ;(function($, window, document, undefined) {
@@ -6404,7 +6407,7 @@ $.ui.fancytree.registerExtension({
  * https://github.com/mar10/fancytree/wiki/LicenseInfo
  *
  * @version 2.22.5-0
- * @date 2017-05-07T17:54:15Z
+ * @date 2017-05-07T19:23:46Z
  */
 
 
@@ -6985,7 +6988,7 @@ $.ui.fancytree.registerExtension({
  * https://github.com/mar10/fancytree/wiki/LicenseInfo
  *
  * @version 2.22.5-0
- * @date 2017-05-07T17:54:15Z
+ * @date 2017-05-07T19:23:46Z
  */
 
 ;(function($, window, document, undefined) {
@@ -7301,7 +7304,7 @@ $.ui.fancytree.registerExtension({
  * https://github.com/mar10/fancytree/wiki/LicenseInfo
  *
  * @version 2.22.5-0
- * @date 2017-05-07T17:54:15Z
+ * @date 2017-05-07T19:23:46Z
  */
 
 ;(function($, window, document, undefined) {
@@ -7655,7 +7658,7 @@ $.ui.fancytree.registerExtension({
  * https://github.com/mar10/fancytree/wiki/LicenseInfo
  *
  * @version 2.22.5-0
- * @date 2017-05-07T17:54:15Z
+ * @date 2017-05-07T19:23:46Z
  */
 
 ;(function($, window, document, undefined) {
@@ -7799,7 +7802,7 @@ $.ui.fancytree.registerExtension({
  * https://github.com/mar10/fancytree/wiki/LicenseInfo
  *
  * @version 2.22.5-0
- * @date 2017-05-07T17:54:15Z
+ * @date 2017-05-07T19:23:46Z
  */
 
 ;(function($, window, document, undefined) {
@@ -8005,7 +8008,7 @@ $.ui.fancytree.registerExtension({
  * https://github.com/mar10/fancytree/wiki/LicenseInfo
  *
  * @version 2.22.5-0
- * @date 2017-05-07T17:54:15Z
+ * @date 2017-05-07T19:23:46Z
  */
 
 ;(function($, window, document, undefined) {
@@ -8393,7 +8396,7 @@ $.ui.fancytree.registerExtension({
  * https://github.com/mar10/fancytree/wiki/LicenseInfo
  *
  * @version 2.22.5-0
- * @date 2017-05-07T17:54:15Z
+ * @date 2017-05-07T19:23:46Z
  */
 
 ;(function($, window, document, undefined) {
@@ -8842,7 +8845,7 @@ $.ui.fancytree.registerExtension({
  * https://github.com/mar10/fancytree/wiki/LicenseInfo
  *
  * @version 2.22.5-0
- * @date 2017-05-07T17:54:15Z
+ * @date 2017-05-07T19:23:46Z
  */
 
 ;(function($, window, document, undefined) {
@@ -8938,7 +8941,7 @@ $.ui.fancytree.registerExtension({
  * https://github.com/mar10/fancytree/wiki/LicenseInfo
  *
  * @version 2.22.5-0
- * @date 2017-05-07T17:54:15Z
+ * @date 2017-05-07T19:23:46Z
  */
 
 ;(function($, window, document, undefined) {
