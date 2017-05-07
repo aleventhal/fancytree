@@ -3648,10 +3648,12 @@ $.extend(Fancytree.prototype,
 			cnList.push(cn.expanded);
 		}
 		if( aria ){
-			if (hasChildren) {
+			if (hasChildren || (hasChildren === undefined && node.lazy)) {
+				// Has or likely has children
 				$ariaElem.attr("aria-expanded", Boolean(node.expanded));
 			}
 			else {
+				// Definitely no children
 				$ariaElem.removeAttr("aria-expanded");
 			}
 		}
