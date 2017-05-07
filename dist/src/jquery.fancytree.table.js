@@ -9,8 +9,8 @@
  * Released under the MIT license
  * https://github.com/mar10/fancytree/wiki/LicenseInfo
  *
- * @version 2.22.4
- * @date 2017-05-06T06:26:23Z
+ * @version @VERSION
+ * @date 2017-05-07T16:49:11Z
  */
 
 ;(function($, window, document, undefined) {
@@ -88,7 +88,7 @@ function findPrevRowNode(node){
 
 $.ui.fancytree.registerExtension({
 	name: "table",
-	version: "2.22.4",
+	version: "@VERSION",
 	// Default options for this extension.
 	options: {
 		checkboxColumnIdx: null, // render the checkboxes into the this column index (default: nodeColumnIdx)
@@ -234,7 +234,7 @@ $.ui.fancytree.registerExtension({
 				if( ctx.hasCollapsedParents && !deep ) {
 					// #166: we assume that the parent will be (recursively) rendered
 					// later anyway.
-					node.debug("nodeRender ignored due to unrendered parent");
+					// node.debug("nodeRender ignored due to unrendered parent");
 					return;
 				}
 				// Create new <tr> after previous row

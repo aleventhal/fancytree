@@ -7,8 +7,8 @@
  * Released under the MIT license
  * https://github.com/mar10/fancytree/wiki/LicenseInfo
  *
- * @version 2.22.4
- * @date 2017-05-06T06:26:23Z
+ * @version @VERSION
+ * @date 2017-05-07T16:49:11Z
  */
 
 /** Core Fancytree module.
@@ -2365,7 +2365,7 @@ Fancytree.prototype = /** @lends Fancytree# */{
 		/*jshint +W018 */
 		this._enableUpdate = flag;
 		if ( flag ) {
-			this.debug("enableUpdate(true): redraw ", this._dirtyRoots);
+			this.debug("enableUpdate(true): redraw ");  //, this._dirtyRoots);
 			this.render();
 		} else {
 		// 	this._dirtyRoots = null;
@@ -3646,13 +3646,12 @@ $.extend(Fancytree.prototype,
 		// node.debug("aria", node.expanded, aria, $ariaElem);
 		if( node.expanded ){
 			cnList.push(cn.expanded);
-			if(aria){
-				$ariaElem.attr("aria-expanded", true);
+		}
+		if( aria ){
+			if (hasChildren) {
+				$ariaElem.attr("aria-expanded", Boolean(node.expanded));
 			}
-		}else if( aria ){
-			if( hasChildren ) {
-				$ariaElem.attr("aria-expanded", false);
-			} else {
+			else {
 				$ariaElem.removeAttr("aria-expanded");
 			}
 		}
@@ -4683,7 +4682,7 @@ $.extend($.ui.fancytree,
 	/** @lends Fancytree_Static# */
 	{
 	/** @type {string} */
-	version: "2.22.4",      // Set to semver by 'grunt release'
+	version: "@VERSION",      // Set to semver by 'grunt release'
 	/** @type {string} */
 	buildType: "production", // Set to 'production' by 'grunt build'
 	/** @type {int} */
