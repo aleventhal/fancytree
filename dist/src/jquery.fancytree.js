@@ -7,8 +7,8 @@
  * Released under the MIT license
  * https://github.com/mar10/fancytree/wiki/LicenseInfo
  *
- * @version @VERSION
- * @date 2017-05-07T16:49:11Z
+ * @version 2.22.5-0
+ * @date 2017-05-07T17:09:22Z
  */
 
 /** Core Fancytree module.
@@ -3648,12 +3648,10 @@ $.extend(Fancytree.prototype,
 			cnList.push(cn.expanded);
 		}
 		if( aria ){
-			if (hasChildren || (hasChildren === undefined && node.lazy)) {
-				// Has or likely has children
+			if (hasChildren) {
 				$ariaElem.attr("aria-expanded", Boolean(node.expanded));
 			}
 			else {
-				// Definitely no children
 				$ariaElem.removeAttr("aria-expanded");
 			}
 		}
@@ -4684,7 +4682,7 @@ $.extend($.ui.fancytree,
 	/** @lends Fancytree_Static# */
 	{
 	/** @type {string} */
-	version: "@VERSION",      // Set to semver by 'grunt release'
+	version: "2.22.5-0",      // Set to semver by 'grunt release'
 	/** @type {string} */
 	buildType: "production", // Set to 'production' by 'grunt build'
 	/** @type {int} */

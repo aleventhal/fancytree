@@ -8,8 +8,8 @@
  * Released under the MIT license
  * https://github.com/mar10/fancytree/wiki/LicenseInfo
  *
- * @version @VERSION
- * @date 2017-05-07T16:49:11Z
+ * @version 2.22.5-0
+ * @date 2017-05-07T17:09:22Z
  */
 
 ;(function($, window, document, undefined) {
@@ -109,7 +109,7 @@ function renderLevelCss(containerId, depth, levelOfs, lineOfs, labelOfs, measure
  */
 $.ui.fancytree.registerExtension({
 	name: "wide",
-	version: "@VERSION",
+	version: "2.22.5-0",
 	// Default options for this extension.
 	options: {
 		iconWidth: null,     // Adjust this if @fancy-icon-width != "16px"
