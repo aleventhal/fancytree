@@ -3628,7 +3628,7 @@ $.extend(Fancytree.prototype,
 			return;
 		}
 		if( aria ) {
-			$ariaElem = node.tr ? $(node.tr) : $(node.span); //.find(".fancytree-title");
+			$ariaElem = node.tr ? $(node.tr) : $(node.li); //.find(".fancytree-title");
 		}
 		// Build a list of class names that we will add to the node <span>
 		cnList.push(cn.node);
