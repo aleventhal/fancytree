@@ -8,7 +8,7 @@
  * https://github.com/mar10/fancytree/wiki/LicenseInfo
  *
  * @version 2.22.5-0
- * @date 2017-05-07T17:18:55Z
+ * @date 2017-05-07T17:29:20Z
  */
 
 /** Core Fancytree module.
@@ -3628,7 +3628,7 @@ $.extend(Fancytree.prototype,
 			return;
 		}
 		if( aria ) {
-			$ariaElem = node.tr ? $(node.tr) : $(node.span); //.find(".fancytree-title");
+			$ariaElem = $(node.tr || node.li); //.find(".fancytree-title");
 		}
 		// Build a list of class names that we will add to the node <span>
 		cnList.push(cn.node);
@@ -5164,7 +5164,7 @@ $.extend($.ui.fancytree,
  * https://github.com/mar10/fancytree/wiki/LicenseInfo
  *
  * @version 2.22.5-0
- * @date 2017-05-07T17:18:55Z
+ * @date 2017-05-07T17:29:20Z
  */
 
 // To keep the global namespace clean, we wrap everything in a closure
@@ -5365,7 +5365,7 @@ $.ui.fancytree.registerExtension({
  * https://github.com/mar10/fancytree/wiki/LicenseInfo
  *
  * @version 2.22.5-0
- * @date 2017-05-07T17:18:55Z
+ * @date 2017-05-07T17:29:20Z
  */
 
 ;(function($, window, document, undefined) {
@@ -5831,7 +5831,7 @@ $.ui.fancytree.registerExtension({
  * https://github.com/mar10/fancytree/wiki/LicenseInfo
  *
  * @version 2.22.5-0
- * @date 2017-05-07T17:18:55Z
+ * @date 2017-05-07T17:29:20Z
  */
 
 ;(function($, window, document, undefined) {
@@ -6404,7 +6404,7 @@ $.ui.fancytree.registerExtension({
  * https://github.com/mar10/fancytree/wiki/LicenseInfo
  *
  * @version 2.22.5-0
- * @date 2017-05-07T17:18:55Z
+ * @date 2017-05-07T17:29:20Z
  */
 
 
@@ -6985,7 +6985,7 @@ $.ui.fancytree.registerExtension({
  * https://github.com/mar10/fancytree/wiki/LicenseInfo
  *
  * @version 2.22.5-0
- * @date 2017-05-07T17:18:55Z
+ * @date 2017-05-07T17:29:20Z
  */
 
 ;(function($, window, document, undefined) {
@@ -7301,7 +7301,7 @@ $.ui.fancytree.registerExtension({
  * https://github.com/mar10/fancytree/wiki/LicenseInfo
  *
  * @version 2.22.5-0
- * @date 2017-05-07T17:18:55Z
+ * @date 2017-05-07T17:29:20Z
  */
 
 ;(function($, window, document, undefined) {
@@ -7655,7 +7655,7 @@ $.ui.fancytree.registerExtension({
  * https://github.com/mar10/fancytree/wiki/LicenseInfo
  *
  * @version 2.22.5-0
- * @date 2017-05-07T17:18:55Z
+ * @date 2017-05-07T17:29:20Z
  */
 
 ;(function($, window, document, undefined) {
@@ -7799,7 +7799,7 @@ $.ui.fancytree.registerExtension({
  * https://github.com/mar10/fancytree/wiki/LicenseInfo
  *
  * @version 2.22.5-0
- * @date 2017-05-07T17:18:55Z
+ * @date 2017-05-07T17:29:20Z
  */
 
 ;(function($, window, document, undefined) {
@@ -8005,7 +8005,7 @@ $.ui.fancytree.registerExtension({
  * https://github.com/mar10/fancytree/wiki/LicenseInfo
  *
  * @version 2.22.5-0
- * @date 2017-05-07T17:18:55Z
+ * @date 2017-05-07T17:29:20Z
  */
 
 ;(function($, window, document, undefined) {
@@ -8393,7 +8393,7 @@ $.ui.fancytree.registerExtension({
  * https://github.com/mar10/fancytree/wiki/LicenseInfo
  *
  * @version 2.22.5-0
- * @date 2017-05-07T17:18:55Z
+ * @date 2017-05-07T17:29:20Z
  */
 
 ;(function($, window, document, undefined) {
@@ -8842,7 +8842,7 @@ $.ui.fancytree.registerExtension({
  * https://github.com/mar10/fancytree/wiki/LicenseInfo
  *
  * @version 2.22.5-0
- * @date 2017-05-07T17:18:55Z
+ * @date 2017-05-07T17:29:20Z
  */
 
 ;(function($, window, document, undefined) {
@@ -8938,7 +8938,7 @@ $.ui.fancytree.registerExtension({
  * https://github.com/mar10/fancytree/wiki/LicenseInfo
  *
  * @version 2.22.5-0
- * @date 2017-05-07T17:18:55Z
+ * @date 2017-05-07T17:29:20Z
  */
 
 ;(function($, window, document, undefined) {
